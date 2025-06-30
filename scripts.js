@@ -76,7 +76,7 @@ const translations = {
 
 // Function to set language
 function setLanguage(lang) {
-    const content = translations[lang] || translations.en;
+    const content = translations[lang] || translations.de;
     for (const key in content) {
         const element = document.getElementById(key);
         if (element) element.textContent = content[key];
@@ -88,5 +88,5 @@ function setLanguage(lang) {
 
 // Get lang parameter from URL and set language
 const urlParams = new URLSearchParams(window.location.search);
-const lang = urlParams.get('lang') || 'en';
+const lang = urlParams.get('lang') || 'de';
 setLanguage(lang);
